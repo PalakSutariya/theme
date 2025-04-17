@@ -1,0 +1,491 @@
+-------------CODE FLOW------------
+
+
+====================================================================================================================================
+
+TASK :1 ======= 12 HR
+--Donation Form: Generator
+    1) Structure of the CRUD functions for the donation form generator
+    2) Building the base design for the generator
+    3) Load data from project & display as “Default” value
+
+    ==========WORK FLOW==========
+    - Create Model,Migration file for teble create in DB for Donation module
+    - Create Controller For CRUD 
+        -Index  -All List
+        - Create - Add  data
+        - Store - Save Data - with validation
+        - Edit - Update  data with send old data
+        - Update - Update Data - with validation
+        - Delete - Remove Donation Detail
+    - Blade File
+       - Index - Server Side Datatable with searching & sorting For Donation Details
+       - Add - Donation  add HTML dynamic Form with Vue JS  with  Validation 
+       - Edit - Donation Update HTML  dynamic Form with Vue JS With Fill data 
+
+    ==========TEST==========
+     - Donation Details Insert/Update/Delete With  Validation on it
+
+TASK :2 ======= 
+--Donation form: ad
+    Construction of the complete design for variant 1 (desktop + mobile). Including all 5 steps
+        1) Basic construction of the structure
+        2) Trust: Organization details
+        3) Trust: Donate to the Progress Bar
+        4) Trust: Previous donors
+        5) Thank-you: Social share options
+
+
+
+
+TASK :3 ======= 2 HR
+--Donation Form: Dynamic Basic Elements
+    Dynamic display of the preview in the admin area
+        1) Change of color is shown on all pages
+        2) Change of picture picture displayed on all pages
+        3) Change of public name + public description is reflected on all pages
+
+    ==========WORK FLOW==========
+    - Create Migration file for Create donation_form table
+    - Set Image and color form field to Donation Generater Form 
+    - Preivew Select image , Color and description  Form fields  Admin side in All pages
+
+    ==========TEST==========
+     - Image/Color/Public Description Fields Set dynamic in all preview admin side
+
+
+TASK :4 ======= 2 HR
+--Donation Form: Dynamic Amounts
+    The amounts are dynamically displayed in the preview + in the donation form
+        1) Enable / disable monthly donation
+        2) Monthly donation amounts (6th mandatory), 1x preferred (optional)
+        3) Enable / disable one-time donation
+        4) One-off donation amounts (6th mandatory), 1x preferred (optional)
+
+        ==========WORK FLOW==========
+        - Set Monthly  and one-time donation form field with Enable/Disable and mandatory/preferred fields to Donation Generater Form 
+        - Preivew  Monthly  and one-time donation form field  Admin side as selected in form 
+
+        ==========TEST==========
+        - Monthly  and one-time donation Fields Set dynamic in all preview admin side 
+
+TASK :5 ======= 2 HR
+--Donation Form: Dynamic Info Organization
+    Organization information can be displayed dynamically (preview + form).
+        1) Activate / deactivate the option
+        2) Change logo, name, 2x icons (icon selector), 2x text field
+
+        ==========WORK FLOW==========
+        - create Organization information form field with Enable/Disable  Donation Generater Form 
+        - create Logo Field,name Field, 2 Field of Icon and its related text  to form
+        - Preivew Organization information form field  Admin side 
+
+        ==========TEST==========
+        - Organization information Set dynamic in  preview admin side 
+
+
+TASK :6 ======= 2 HR
+--Donation form: Progress bar
+    Progress bar displayed dynamically (preview + final form)
+        1) Field: Target Sum
+        2) Field: offset (for start value)
+
+        ==========WORK FLOW==========
+        - create Target sum text field and its offset text fields to Donation Generater Form 
+        - Preview  Progressbar and set sum value and offset value into it and show it admin side
+
+
+        ==========TEST==========
+        - Progressbar  dynamic in  preview admin side 
+
+
+
+TASK :7 ======= 2 HR
+--Donation Form: Donor
+    Function for displaying donors (dynamic + form)
+        1) Upload 3 pictures
+        2) Offset (start value for the display)
+
+        ==========WORK FLOW==========
+        - create Multiple image selected form field for donors in  Donation Generater Form 
+        - create Offset text field for set value of donors
+        - Preivew  Monthly  and one-time donation form field  Admin side as selected in form 
+
+        ==========TEST==========
+        - displaying donors Set dynamic in  preview admin side 
+
+
+TASK :8 ======= 2 HR
+--Donation Form: Social Share Elements
+    Display of the social share elements from variant 2
+        1) Set a text and a link (default values)
+        2) Enable / disable each option
+        3) Set an individual text or link per social media option
+
+        ==========WORK FLOW==========
+        - Create Social Media form field with Enable/Disable and text  fields to Donation Generater Form 
+        - Preivew  Social media  form field   Admin side  
+
+        ==========TEST==========
+        - Social Media Fields Set dynamic in  preview admin side 
+
+
+
+
+
+Admin:   2 hr
+-----------
+admin login 
+Theme Set Up 
+
+
+users: 3 hour 
+--------------
+id
+first_name
+last_name
+email
+role: user
+password
+gender
+
+
+projects: 3 hour
+-------------- 
+id
+project_name
+donation_target
+main_photo
+contact: first_name, last_name, gender, phone, email
+fee_in_perc
+main_color
+short_desc
+
+
+Front site:  4 hour
+-------------
+- user login
+- Dashboard
+- Profile edit
+- Reset password
+- Forget password
+
+--------------------------------------------
+-------------CODE FLOW------------
+
+- Create New project For Laravel 
+- Set Theme Template For Admin and User side
+- Create Database for project
+- Create Migration for Add Columns in  Users table (first_name,last_name,role,gender)
+- Create Seeder File For add data to users table for Admin
+- Login
+    - Create Controller and view file for both Admin And User
+- Admin Side
+    - Dashboard Module
+        - Create Controller 
+        - Create HTML Blade file
+    - User Module
+        - Create Controller
+            - Index - All List
+            - Create - Add New User file view
+            - Store - Save Data - with validation
+            - Edit - Update User file view with send old data
+            - Update - Update Data - with validation
+            - Delete - Remove User
+        - Blade File
+            - Index - Server Side Datatable with searching & sorting
+            - Add - User add HTML with  Validation 
+            - Edit - User Update HTML With Fill data 
+    - Projects Module
+        - Create Model and Migration to Create Table in Database For Project
+        - Create Controller 
+            - Index - All List
+            - Create - Add New Project file view
+            - Store - Save Data - with validation
+            - Edit - Update Project file view with send old data
+            - Update - Update Data - with validation
+            - Delete - Remove Project
+        - Blade File
+            - Index - Server Side Datatable with searching & sorting
+            - Add - Project add HTML with  Validation 
+            - Edit - Project Update HTML With Fill data 
+    - Reset Password For Admin
+        - Controller
+            - Update - Update password with check old password
+        - Blade File
+            - Create Change Password HTML 
+    - Edit Profile For Admin 
+        -Controller
+            - Edit - Update Admin File view with send old data
+            - Update - Update data - with validation 
+        -Blade File
+            - Edit - Admin Update HTML with Fill Data
+- User Side
+    - Login Redirect To User Dashboard
+    - Create Dashboard View HTML File For User Dashboard
+    - Reset Password For User
+        - Controller
+            - Update - Update password with check old password
+        - Blade File
+            - Create Reset Password HTML 
+    - Edit Profile For User 
+        -Controller
+            - Edit - Update User File view with send old data
+            - Update - Update data - with validation 
+        -Blade File
+            - Edit - User Update HTML with Fill Data
+- Forget password 
+    - Create Controller
+        - Index 
+        - SendMail
+        - ResetPassword 
+        - Update - Update Password 
+    -Blade File
+        - ResetPassword Blade File After Click to Forgot Password Link
+        - Change Password Blade File After Click on Link From Mail
+    - Create Mail File 
+        - Blade File with Reset Password Link
+        - PHP file for Pass data to Mail
+- Display Notification Message
+
+
+
+-------------Test----------------
+
+
+ - Admin 
+     - Check Admin Login and Validation on Login form
+     - User Insert/Update/Delete With  Validation on it
+     - Projects Insert/Update/Delete With  Validation on it
+     - Update  Profile from   dashboard 
+     - Reset Password From Dashboard
+- User
+    - Check User Login and Validation on Login form
+    - Update  Profile from   dashboard 
+    - Reset Password From Dashboard
+- Forgot Password Functionality with Mail Send and update Password  through it
+   and login with new password
+
+====================================================================================================================================================
+
+Storage & verification of form entries Card (19/04/2023)
+
+The form entries must be checked in the frontend and saved after successful completion.
+
+    -Public Form Entries
+     - Create Migration file for Add Donation_details table  in  database 
+     - Get all Data When Donar Checked at frontend form 
+     - Put require validation on each field at Public form Front end Side(With Translation)
+     - Make Route For Get Checked Data 
+     - Create Model 
+     - Create Controller
+       - Store - Store All Data in Database 
+     - After save data and  successfuly donation Show success message 
+
+Test
+
+- Filld Data on public form and Check all Validation on it 
+- Check Data save in database properly with related field
+- Successfuly message after checked data save
+
+====================================================================================================================================================
+Please create a new tab in the project settings, name “Slack”.
+
+In this tab there should be the possibility to specify the connection details for a channel.
+
+We also need the following settings there:
+
+Push every donation by date (date field + checkbox to activate)
+If the current time is before the set date, each confirmed donation (status = successful) should be sent to the Slack channel
+
+Push at milestone (input field for percent + checkbox to activate)
+If the push is activated, a message should be automatically sent to the channel when a milestone is reached. If I enter 10% there, for example, a message should be sent at 10%, 20%, 30%, 40% of the project goal.
+
+
+Project dashboard 
+
+Project dashboard with all the necessary information as seen in the figma.
+
+- Create New tab name Slack in Project setting and design require  input fields For that
+- Create Migration file for add slacks field in database table
+- Install require library for slack notification and set up in project
+- Controller Function
+  - For Every donation Notification get date value and custom message and do a code for send notification when currunttime is before the date set on every successfull donation
+  - For milestone Noification get percent value from input and implement calculation regarding it to project goal. And manage to sent notification on every percent value milesstone.
+- Both notification manage by Toggle Activate/Deactivate Button value comes from Project Slack tab
+
+Test ---
+- Successfuly notification sent in slack channel in both milestone and every successful  Donation 
+- Test Notification in Different scenario of Milesstone and Donation(Toggle activate/deactivate,Date,Percentage value)
+
+Test
+
+- Listing Page of donation data project wise
+- Export(CSV) Functionality for Donation Data
+- Details View page of Donation data
+
+
+
+======================================================================================================================================================
+
+Agency dashboard as shown in the figma.
+
+- Create Agency Dashboard Page After Admin Login Successfully
+- Controller function (For All Project Details)
+    - Index 
+        - Get All Project Count for Project Tab
+        - Calculate Donation Amount(Confirmed+Pending) For Spenden Tab
+        - Calculate Donation Amount (Confirmed) for Cashflow Tab
+        - Calculate processing fee for Provision Tab
+        - Get Count of Total useres and Total Donation Useres and Calculate percentage for Conversion Tab
+- Implement Project Card with Single Project details in Vue js
+        - Display Fix count(8) of Project Card By default
+        - Insert Load more functionality to display other Project Card details
+        - Create API route For get data Project wise 
+        - Controller Function (For Single Project Details)
+            - index
+                - Get Project Data with require data(Project Details,Spenden,cashflow)
+        - Set Dynamic Round Progress bar on each pproject card (Current donation to donation target)
+        - Create Details View Page for Each Project 
+                - Set All Data in detalis view page of perticular Project
+        -  PDF Report
+            - Implement Pdf generation For each Project data
+            - Design PDF blade file
+            - Controller Function
+                - Index - For get data of each project and Download PDF 
+- Implement DateRangePicker on Dashboard Page
+- Set All Dynamic Data on Selected Date(Default Current month)
+
+
+--Test
+
+- Dashboard Page with Proper Calculation data of all project and Each project Card
+- PDF generation properly 
+- Details View Page 
+- Data Change dynamically on Selected Date from DateRangePicker
+
+
+==================================================================================================================
+
+
+Facebook data query
+    
+    - Install Require Library for facebook-ads in Laravel 
+    - Create Test Facebook app in our facebook account and enable facebook add API 
+    - Set Facebook Config in Project (Facebook app key and secret key)
+    - Generate Access Token Using facebook config
+    - Create  Helper function for get relevent data of ad account using access token and ad_account_id
+        - campaign,ad groups,To sue,Ad Variations and its related data for each level 
+        - Specify function for get  Results,Costs,Range,frequency,Budget for each level 
+        - And CPM,impressions,clicks from ad groups and campaingings
+    - Check that can  we get the data for a specific period after pass date as a request parameter
+
+
+
+--Testing all function for get relevent data of ad account (campaign,ad groups,To sue,Ad Variations and Results,Costs,Range,frequency,Budget,CPM,impressions,clicks form each level which is require)
+--Testing about  get the data for a specific period
+
+
+==================================================================================================================
+
+
+user role
+
+- Get all User data  from User table and set into project setting
+- Provide User Dropdown to Project setting for assigne project to User on Add/Edit Project 
+- Add field in to table called assigned_to and save User in to it 
+- After User login Show assigned Project listing to that perticular User
+- Set permission to User for Project dashboard and reciept generate
+- Get only assigned project donation data and listing it in to Bulk receipt generator
+- Set Bulk receipt generator permission  for login User
+- Denied permission for Forms of that projects
+
+Test 
+
+-User have only that project access which is assigned to them
+-Bulk receipt generator and Receipt Generator working for that projects 
+-Denied Permission for Forms of Projects 
+
+==================================================================================================================
+
+ 
+
+- Create New tab name Payment in Project setting and design require  input fields For that
+- Create Migration file for add new table  called stripe_account in database table
+- Create controller and model for Stripe account 
+- create controller function for add new stripe acc and save in database table
+- Add one field Stripeacc_id in Project table through migration 
+- Show listing of all created stripe account on Payment tab in Project Setting 
+- Add action button on listing stripe acc.When click on that action button  assign  that stripe acc to that project. 
+- When create new stripe acc we can assign direct to project and make that stripe acc default for that Project 
+- Add one tab payment user side -- where set assigned project dropdown and stripe acc list and set one button for create new stripe acc
+- For existing stripe acc on user side we will show only those acc which are related to assign Project to the user.
+
+Testing
+
+- Testing Stripe Acc assigned to the project every scenario 
+- User create stripe acc assigned to directly for that Project 
+- Admin can also create stripe acc and make default assigned to that project
+- Stripe acc created succussfully while create acc form use/Admin Side
+
+============================================ Stripe One time card ================================================
+
+- Check the donation_type(Onetime or Monthly) on payment step in our from 
+- If the Donation_type is onetime then redirect user to payment form after click on  step 4 
+- Create and design  payment form for create payment of donation to user
+- Set dynamic donation amount( which user selected)  and stripe acc id (based on project) on Stripe payment intent object 
+- After submiting the payment form user redirect to return url based on payment status
+- After check Payment status Update payment status in database for donation.
+- if payment is confirm redirect to thankyou page else need to redirect to donation form  or as per requirement have to  redirect it.
+- For check paymet status we can create one webhook in stripe acc and make controller function for check payment status.
+
+
+- Payment Redirect to form and after submitting check payment status into it 
+- Testing Update payment status in our database 
+- Testing return URL after payment done based on payment status
+
+
+============================================ Stripe Monthly Payment Card ================================================
+
+
+
+
+- Check the donationtype when user on payment step (Monthly)
+- When user Click Monthly donation
+    - Create API route and Controler Function for create Payment intent
+    - retrive payment intent in response and set confirmPayment and do payment first time.
+    - Create recurring_donation table for save meta deta of donation like (end_date,next_amount) for monthly donation 
+    - After sucessfully donation save entry in both table donation and recurring_donation table for monthly donation 
+    - Here consider next date of payment which we set on interval latter(Curruntly a static interval for payment)  
+    - Save the next payment date in database for that monthly Donation 
+- Reminder Cron
+    - Create command for cron and Get next payment date into it 
+    - Set date before 3 day of payment date and send reminder mail to user
+    - Add field to Project setting for change text of email of reminder email on Add/edit and save into database
+    - Retrive Donation details and mail text dynamically from project setting 
+    - Create Mail send Functionality for reminder donation with bellow variables
+       - Set link for Change Regular donation 
+         - Set link and it reedirect user to new tab for change donation 
+         - If amount exist then change amount in recurring_donation table for next donation amount 
+       - Set link on button for Stop the Regular Donation 
+         - it user entered date for stop regular donation then update stop_date in recurring_donation table
+       - Donation AMount 
+       - Contact Details of Donor 
+- Payment Cron
+    - Create command for cron and  Get donation details on that 
+    - Check Next payment date on every donation and get donation details for that donation  from recurring_donation table
+    - Set cron job for daily to take place donation data  when its match to next donation date 
+    - After successfuly donation update next donation date in to recurring_donation table
+    - Save donation details in to database when new payment done for donation via cron job in donation details table   
+- After succesfull donation save status in to donation details table   for new donation take place via cron 
+
+Note :- 
+  RNd for future payment intents
+
+
+ - Create Payment First time with  monthly donation
+ -Test cron for reminder email 
+    - link for change donation
+    - link for stop donation
+ - Payment Cron testing with all payment of monthly donation data donation data 
+ -Test all payment data save in database  
